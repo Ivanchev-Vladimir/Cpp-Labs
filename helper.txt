@@ -2,4 +2,10 @@ git add .
 git commit -m "update code"
 git push
 
-git pull
+git config --global alias.save "!git add -A && git commit -m \"update\" && git push"
+
+--------------------------------------------------------------
+
+git save - чтобы сохранить все
+
+git pull - принять все
