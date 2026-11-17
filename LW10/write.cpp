@@ -1,0 +1,15 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main () {
+	ofstream file("data.bin", ios::binary);
+	if (!file.is_open()) return 0;
+	double a[] = { 12.345, -7.891, 147.85, 3.141, 0.05 };
+	double b[] = { 999.99, 10.5, 3.14, -5.0, 28.4 };
+	double c[] = { 4.5, 50.0, 12.3, 50.0, 1.1 };
+	file.write(reinterpret_cast<const char*>(a), sizeof(a));
+	cout << "done";
+	file.close();
+	return 0;
+}
